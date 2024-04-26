@@ -1,0 +1,127 @@
+{% extends 'templates/base.html' %}
+{% load static %}
+{% block title %}Laxmi cheat Fund {% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'home.css' %}">{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="../static/home.css">
+
+<body>
+    <main>
+        <h1 class="Hone" align="center">Welcome to LaxmiCheat Fund</h1>
+
+        <div class="container">
+            <div class="images">
+                <img src="{% static 'asets/new.png '%}" alt="bankimage">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi provident ipsa similique quibusdam
+                repellendus, molestias unde debitis, tempore aspernatur animi autem doloremque impedit totam ea officia
+                labore magni quaerat? Eveniet fuga corporis similique dicta voluptas cum ullam, commodi ipsa vero vel
+                itaque atque recusandae tempore sit nisi nesciunt distinctio voluptate. Neque sit, eaque illum harum
+                ipsa, quasi cupiditate vero iure at eius excepturi repellat aperiam quam ea tenetur voluptatem dicta
+                omnis alias itaque maxime iusto, necessitatibus nobis quia cum. Commodi porro numquam expedita inventore
+                sed, laborum possimus totam accusantium, at, hic fuga quia tempora labore necessitatibus error optio.
+                Quam veritatis fuga nobis est nostrum eligendi rem ea aliquid mollitia cum molestias ipsum optio fugit
+                eum quis, non voluptas cumque velit doloremque. Suscipit, ullam officia tempora, consectetur repudiandae
+                ex laudantium consequatur et minima eius quos deserunt neque vero nulla aliquid maiores corporis nihil
+                nemo iure quidem vel sunt quisquam. Vel, numquam ducimus inventore similique illo quaerat deleniti eum
+                optio dolorem accusantium quae rerum eaque reiciendis alias repellat hic cumque officia excepturi.</p>
+        </div>
+        <h2>The bank which gives you Dubble Amount of your Deposit. To get the benifit you have to Become our customer
+        </h2>
+        <div class="option">
+            <p><a href="#savingacount">Open saving account</a></p>
+            <p><a href="#currentacount">Open current account</a></p>
+            <p><a href="{% url 'transfer' %}">Bank transfer</a></p>
+            <p><a href="{% url 'deposit' %}">Bank Deposit</a></p>
+        </div>
+
+        <div class="saving" id="savingacount">
+            <p class="savehead">Create the saveing account</p>
+            <p>Fill the all field , which given below</p>
+            <div class="f">
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="">Name <sup>*</sup></label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <label for="">Email <sup>*</sup></label>
+                    <input type="email" name="emai" id="mail" required placeholder="laxmibank@gmail.com">
+                    <label for="">Phone Number <sup>*</sup></label>
+                    <input type="number" name="phoe" required id="phone" placeholder="9199989790">
+                    <label for="">Adhar Number <sup>*</sup></label>
+                    <input type="number" name="adhar" id="adhar" required placeholder="123456789012">
+                    <label for="">Occupation <sup>*</sup></label>
+                    <select name="sel" value="student" id="sl">
+                        <option value="student">Student</option>
+                        <option value="salary">Salaried</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="non">Other</option>
+                    </select>
+                    <label for="">Password <sup>*</sup></label>
+                    <input type="password" name="npass" id="npass" required>
+                    <label for=""> Cunfirm Password <sup>*</sup></label>
+                    <input type="password" name="cpass" id="cpass" required>
+
+                    <input type="hidden" name="acount" value="saving account">
+                    <label for="">Upload image </label>
+                    <input type="file" name="ph" required id="">
+                    <label for="">
+
+                        <input type="checkbox" name="check" id="check" required> </label>
+                    <p> have read the all terms & conditions
+                    </p>
+                    <input type="submit" class="bbk" value="Create account" id="sub">
+                    <label for=""></label>
+                    {{x}}{{msg}}
+                </form>
+            </div>
+        </div>
+        <div class="current" id="currentacount">
+            <p class="curenthead">Create the Current account</p>
+            <p>Fill the all field , which given below</p>
+            <div class="f">
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token%}
+                    <label for="">Name <sup>*</sup></label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                    <label for="">Email <sup>*</sup></label>
+                    <input type="email" name="emai" id="mail" required placeholder="laxmibank@gmail.com">
+                    <label for="">Phone Number <sup>*</sup></label>
+                    <input type="tel" name="phoe" required id="phone" placeholder="9199989790">
+                    <label for="">Adhar Number <sup>*</sup></label>
+                    <input type="number" name="adhar" id="adhar" required placeholder="123456789012"><label
+                        for="">Occupation <sup>*</sup></label>
+                    <select name="sel" value="student" id="sl">
+                        <option value="student">Student</option>
+                        <option value="salary">Salaried</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="non">Other</option>
+                    </select>
+                    <label for="">Password <sup>*</sup></label>
+                    <input type="password" name="pass" id="pass" required>
+                    <label for=""> Cunfirm Password <sup>*</sup></label>
+                    <input type="password" name="pass" id="pass" required>
+                    <label for="">Upload image </label>
+                    <input type="file" name="ph" required id="">
+                    <label for="">
+
+                        <input type="checkbox" name="check" id="check" required> </label>
+                    <p> have read the all terms & conditions
+                    </p>
+                    <input type="hidden" name="acount" value="current account">
+                    <input type="submit" class="bbk" value="Create account" id="sub">
+                    <label for=""></label>
+                    {{x}}{{msg}}
+                </form>
+                
+            </div>
+        </div>
+        {% block con %}
+
+        {% endblock %}
+    </main>
+
+
+</body>
+
+{% endblock %}

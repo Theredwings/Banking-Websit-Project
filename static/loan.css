@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+    font-weight: bolder;
+    
+    font-size: 60px;
+    color: blue;
+    border: none;
+    border-radius: 7px;
+}
+.q{
+    font-size: 29px;
+    margin-top: 6px;
+    text-align: center;
+}
+.form1{
+    text-align: center;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}body{
+    background-color: rgba(211, 211, 211, 0.344);
+
+}#rate{
+    width: 50px;
+}.rt{
+    margin-left: -30px;
+}input{
+    margin-bottom: 9px;
+    padding: 3px;
+    border-radius: 5px;
+}.btns{
+    color: white;
+    background-color: rgba(22, 22, 164, 0.803);
+    width: 120px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 9px;
+}.fin{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}.aply{
+    font-size: 17px;
+} form{
+    text-align: center;
+    
+    margin-left: 280px;
+    margin-right: 280px;
+    
+    margin-top:10px;
+    
+}  fieldset{
+    height: 400px;
+    margin-left: 280px;
+    margin-right: 280px;
+    border: none;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    margin-top:20px;
+    background-color: rgba(196, 241, 255, 0.245);
+    box-shadow: 4px 4px 4px rgb(139, 138, 138);
+    border-radius: 5px
+}legend{
+    margin-left: 70px;
+    font-weight: bolder;
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: lightgray;
+}
+form p{
+    
+    margin-bottom: 3px;
+}
+input,select{
+    
+    background-color: rgba(174, 196, 189, 0.168);
+}select{
+    margin-bottom: 3px;
+
+}
+/* #mainf{
+    display: none;
+}#mainf:target{
+    display: block;
+} */
+.suc{
+    display: none;
+}   

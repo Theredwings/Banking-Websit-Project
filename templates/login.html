@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% block limk %} <link rel="stylesheet" href="{% static 'login.css' %}"> {% endblock %}
+<!-- <link rel="stylesheet" href="../static/login.css"> -->
+<body>
+    <div class="log">
+        <!-- <h1>Login Form </h1> -->
+        <div class="fm">
+            <img src="{% static 'asets/user.png' %}" alt="">
+            <form action="" method="post">
+                {% csrf_token %} <p></p>
+                <p class="val">{{m}}</p>
+                <input type="tel" name="user" id="user" required placeholder="Phone No: "><br>
+                <input type="password" name="pass" required id="pass" placeholder="Password:"><br>
+                <input type="submit" class="btn" value="Login">
+                <a href="{% url 'home' %}"><p>Create account</p></a>
+            </form>
+        </div>
+        
+    </div>
+</body>
+{% endblock %}

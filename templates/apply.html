@@ -1,0 +1,35 @@
+{% extends 'loan.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'apply.css' %}">
+
+{% block conten %}
+<body>
+    <fieldset id="mainf">
+
+    
+        <legend>Apply Here</legend>
+        <form action="" id="apply" method="post">
+            {% csrf_token %}
+            <p>Name<sup>*</sup> <input type="text" name="name" required placeholder="Enter name same as bank"></p>
+            
+            <p>Addhar No <sup>*</sup> <input required placeholder="1234 5678 9012" type="number" name="anumber" id=""></p>
+            <p>Phone No <sup>*</sup> <input type="tel" name="pnumber" required placeholder="9998909789" id=""></p>
+            <p>Age<sup>*</sup> 
+            <input type="number" name="age" id="age" required value="21" ></p>
+            <p>Ocupaion <select name="sel" id="sl"> <option value="student">Student</option>
+                <option value="salary">Salaried</option> 
+                <option value="farmer">Farmer</option>
+                <option value="non">Other</option></select></p>
+                <p>Salary <sup>*</sup> <input type="number" name="sal" required placeholder="Yearly salary" id=""></p>
+                <p>Loan Amount <sup>*</sup> <input type="number" name="lm" id="lm" placeholder="Loan amount"></p>
+                <input type="submit" class="btn" value="Submit"> 
+           
+            </fieldset>
+        </form>
+        <!-- {% if ap %}
+        <p>Congrats Mr {{ap}} Your loan has been approve and cradit to you account</p>
+        {% endif %} -->
+       
+    </body>  
+
+{% endblock %}

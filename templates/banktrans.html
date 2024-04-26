@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+{% block con %}
+<style>
+    .c{
+        margin-left: 230px;
+        margin-right: 200px;
+        text-align: center;
+        
+        height: 350px;
+
+
+    }
+   
+   .ff{
+    margin-top: 20px;
+   
+
+   }input{
+    margin-right: 30px;
+    border-radius: 10px;
+   }.den{
+    color: red;
+    margin-bottom: 4px;
+   }
+</style>
+<body>
+    <div class="c" id="">
+        <p class="cur">To transerver amount </p>
+        <p>Fill the all field , which you want to send</p>
+        <div class="ff">
+            <form action="" method="post">
+                 <p></p> <p class="den">{{ma}}</p>
+                {% csrf_token%}
+                <label for="">Name <sup>*</sup></label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+                <label for="">Phone Number <sup>*</sup></label>
+                <input type="tel" name="phoe" required id="phone" placeholder="9199989790">
+                <label for="">Acount Number <sup>*</sup></label>
+                <input type="number" name="ac" id="ac" required placeholder="Account number">
+                <label for="">Amount<sup>*</sup></label>
+                <input type="text" name="amt" id="amt" required placeholder="amount">
+                <br><input id="subs" type="submit" value="Transfer" >
+                <input type="text" name="lul" value="lul" hidden >
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+    {% block title %}
+    Presnoal Loan
+    {% endblock %}
+    <style>
+        .fin{
+            margin-top: 5px;
+        }
+    </style>
+{% block content %}
+<link rel="stylesheet" href="{% static 'loan.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'apply.css' %}"> -->
+<!-- <link rel="stylesheet" href="../static/loan.css"> -->
+<body>
+    <h1>Get Presnoal loan. Only three step </h1>
+    <p class="q">Please Check the final price once</p>
+    <form class="form1" method="post">
+        {% csrf_token %}
+        
+        <p>Loan Mount</p>
+        <p>Please enter loan amount : <input type="text" name="loan" id="loan" required placeholder="000000"></p>
+        <p class="rt">Loan rate : <input type="text" id="rate" value="14% /y" readonly ></p>
+        <p>Duration of loan amount : <input required type="range" name="rang" id="rng" max="10" min="3">{{yr}} year</p>
+        
+        <input type="submit" class="btns" value="Calculate">
+        
+    </form>
+    <p class="fin">Your Final payment is {{final}} /-</p><br>
+    <p class="aply">If you agree with my loan plan <a href="{% url 'apply' %}" class="abt"><input type="button" class="btns" value="Apply here"></a></p>
+    
+    {% block conten %}
+    {% endblock %}
+
+</body>
+{% endblock %}

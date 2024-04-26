@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Account details {% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'ac.css' %}"> {% endblock %}
+{% block content %}
+
+<body>
+<div class="v1">
+    <div class="v2">
+        <h1>Account details </h1>
+        <p>Hello, Mr {{name}} here is your account details please keep safe</p>
+        
+    </div>
+    <div class="v3">
+        <p>Account Holder : {{name}}</p>
+        <p>Bank Name : Laxmi CheatFund </p>
+        <p>Email_id : {{email}}</p>
+        <p>Phone No : {{phone}}</p>
+        <p>Addhar No : {{adh}} </p>
+        <p>Account Number : {{acc}} </p>
+        
+    </div>
+</div>
+</body>
+{% endblock %}

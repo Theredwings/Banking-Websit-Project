@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About prince kumar {% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'about.css' %}"> {% endblock %}
+{% block content %}
+
+<body>
+    <div class="resume">
+        <h1>RESUME</h1>
+
+        <div class="info">
+            <p>Hii, My self <b>Prince Kumar .</b></p>
+            <img src="../static/asets/prince.jpg" alt="prince image">
+        </div>
+        <b class="hd"> AREA OF EXPERTISE</b><br>
+        <hr width="200px">
+        <ul class="area">
+            <li>
+                PYTHON
+            </li>
+            <li>
+                DJANGO
+            </li>
+            <li>
+                REST API
+            </li>
+            <li>
+                MYSQL
+            </li>
+            <li>
+                HTML
+            </li>
+            <li>
+                CSS
+            </li>
+        </ul><br>
+        <b class="hd"> CERTIFICATES</b>
+        <br>
+        <hr width="200px"><br>
+        <div class="para"><p>PYTHON (sep'2022 to nov'2022)</p>
+            <p class="def">Functional , Object Oriented Programming , MODULE(claendar,randon,pickle,functools etc..)</p>
+            <p class="hack"><a target="_blank" href="https://www.hackerrank.com/certificates/1aaf28bee69f">HackrRank
+                    Python(Basic)</a></p>
+            <p class="hack"><a target="_blank" href="https://www.hackerrank.com/certificates/ead39106511b">HackrRank
+                    CSS(Basic)</a></p></div><br>
+        <b class="hd"> EDUCATION</b><br>
+        <hr width="200px"><br>
+        
+        <div class="para"><p>2024</p><p > Bsc ( IT ) </p>
+            <p>Gaya College Gaya , Bihar &nbsp;(Waitng for result)</p></div><br>
+        <b class="hd">LANGUAGES</b><br>
+        <hr width="200px">
+        &nbsp;
+        <div class="para"><p>HINDI</p>
+            <p>ENGLISH</p></div>
+        <div class="project">
+            <h2 align="center"> PERSONAL PROJECTS</h2>
+        </div>
+    </div>
+</body>
+{% endblock %}

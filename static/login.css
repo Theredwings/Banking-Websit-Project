@@ -1,0 +1,51 @@
+.fm{
+    text-align: center;
+    
+  }
+  .fm img{
+    width: 80px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }.val{
+    margin-bottom: 3px;
+    color: red;
+  }
+  form input{
+    width: 210px;
+    padding: 8px;
+    border-radius: 15px;
+    margin-bottom: 9px;
+    box-shadow: 3px 3px 4px lightpink;
+    border: transparent;
+  }
+  .log{
+
+    border:2px solid rgba(211, 186, 186, 0.69) ;
+    margin-left: 450px;
+    margin-right: 450px;
+    height: 470px;
+    background:transparent ;
+    backdrop-filter: blur(30px);
+    opacity: 0.8;
+    border-radius: 12px;
+  }
+  body{
+    background: url(../static/asets/bankimGE.jpg) no-repeat;
+    background-color: wheat;
+    background-position: center;
+    background-size: cover;
+  }.btn{
+    font-weight: bolder;
+    font-size: 20px;
+    width: 170px;
+    margin-top: 3px;
+    box-shadow: 3px 3px 4px rgba(96, 96, 224, 0.474);
+    background-color: #029ffb;
+    padding: 6px;
+    color: lightgray;
+  }p{
+    font-size: 20px;
+  }form a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }

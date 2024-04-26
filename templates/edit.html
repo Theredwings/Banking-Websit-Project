@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %} Profile {% endblock %}
+{% block content %}
+<style>
+    .l1 img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: inline;
+    }
+
+    footer {
+        display: none;
+    }
+
+    body .l1 {
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+
+    .l2 {
+        border: 1px solid lightgray;
+        padding: 8px;
+
+        width: 30%;
+        background-color: white;
+
+    }
+
+    .b {
+        margin-top: -20px;
+        margin-left: 60px;
+        font-size: 25px;
+        display: inline;
+        position: absolute;
+        top: 120px;
+    }
+
+    .l2 p {
+        margin-top: -45px;
+        margin-left: 150px;
+    }
+    form{
+        margin-top: 35px;
+        margin-left: 60px;
+    }
+    form input{
+        margin-bottom: 8px;
+        height: 30px;
+        border-radius: 9px;
+        margin-left: 5px;
+        padding-left: 4px;
+    }.bt{
+        background-color: rgba(0, 0, 255, 0.578);
+       
+        padding: 5px;
+        font-size: 15px ;
+        color: wheat;
+        margin-left: 40px;
+        margin-top: 6px;
+
+    }
+</style>
+
+<body>
+    <div class="l1">
+        <div class="l2">
+            <img src="{{dat.image.url}}" alt="profile image">
+            <b class="b"> {{nm}}</b>
+            <p>{{em}}</p>
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="">Email : </label><input type="email" name="em" required placeholder="abc@gmail.com" id=""><br>
+                
+                <input type="file" name="imgs" required id=""><br>
+                <input type="submit" value="Update profile" class="bt">
+            </form>
+        </div>
+        
+    </div>
+</body>
+{% endblock %}

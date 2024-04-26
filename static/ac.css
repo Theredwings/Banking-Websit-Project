@@ -1,0 +1,22 @@
+.v2{
+    text-align: center;
+
+}
+h1{
+    font-size: 40px;
+    text-shadow: 3px 3px 4px lightslategray;
+}
+.v2 p{
+    margin-top: -30px;
+}.v3{
+    text-align: center;
+    font-weight: bold;
+    height: 250px;
+}
+.v1{
+    margin-left: 300px;
+    margin-right: 300px;
+    border: none;
+    border-radius: 8px ;
+    box-shadow: 3px 3px 4px lightgreen;
+}
